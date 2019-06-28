@@ -17,4 +17,7 @@ script:
 
 after_script: true
 
+deploye:
+  provider: heroku
+
 
