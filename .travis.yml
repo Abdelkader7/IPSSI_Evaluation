@@ -1,3 +1,17 @@
 language: node_js
 node_js:
   - "12"
+
+before_install: true
+
+install: 
+    - npm install 
+
+before_script: true
+
+script: 
+  - "./node_modules/bin/jshint --verbose ./src" 
+
+after_script: true
+
+
