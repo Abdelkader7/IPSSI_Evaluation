@@ -1,26 +1,19 @@
 language: node_js
 node_js:
-  - "12"
-
+- '12'
 before_install: true
-
-install: 
-    - npm install 
-
+install:
+- npm install
 before_script: true
-
-script: 
-  - "./node_modules/.bin/jshint ./src/" 
-  - "./node_modules/.bin/retire" 
-  - if [ "$TRAVIS_BRANCH" = "master" ]; then "./node_modules/.bin/twly"; fi
-
-
+script:
+- "./node_modules/.bin/jshint ./src/"
+- "./node_modules/.bin/retire"
+- if [ "$TRAVIS_BRANCH" = "master" ]; then "./node_modules/.bin/twly"; fi
 after_script: true
-
 deploy:
   provider: heroku
-  api_key: 
-    secure: Pu4wbQP/tigo2+t8zAEXQJW3+SL4QTCPUMlT/xVZuJO6HQzXZjHV/uRJqP7ssr8zgD26uaeXNBbsZoF5L1eaWhZ8dqOpm1ukigtXS5Yz2noSF3wXwCHqrSinYg1mtJavnzqt/7vx7rji5Iwq3ltvkCQ0djCai74ANaqjxtZ1dMHWSfRwLHB8lZul8tiXTfh+csb5Q2X0kJg+kMCVUfWi593rh0RJpkGvnpaEgKwI+PPLNt0m95vQMpmR6MDIFFcF1SvHM3POv0OALfy5waQXEnfoJL4NxdPVGOwy2CgIKNud7H/0FKGREuSH1D+Y7wJ4LtuUlDOLvC92ZEd5nTAkFdYxgkIhDGhRdAuqPvvUiQ5JI2AU6GpMxm/HydJz2fmKu1UvjAuMr2riL/wL3+JiTUPCuDy7OhLnloHyGmbElX3XGwI8G1YQ+xpw6xrASte90SwCLm4NMB879X3j8ZaCqUm5jbsTB17cgc1IFfhISxaKSt1d8j81jlO5rh7+T5P4gzsI8DR8lrz5PRobkDR6JvrSN1j5fruPzsjDrJd3VfAcWWump321sOhCCWqN00dIvNAVprKtUPnEx4y3IDfWbKvKa1Z0twENh8zT8iyO//Hc2ztuzw/tmfmDxu98gGmnRDVjJfW6k1OcqGUiEczZC1Q8KtEjhek0k0gZsmcptWM=
+  api_key:
+    secure: VQWIX+1OEXpwl4pzQ2l6wFDbsdAgTbOIGMvLIi1dyby3j4tg+Q6mVnZehjwiPYqFyVHZSiKFbHRyGfPNV++AQCDc3rB1Jla7+UnDIkZJJYTJh2ub4HPxCczy7XUMmjCP8Rok+JN0ur4//rhIvDl6epIdZVX7VPHeENV7UCe4zbPkX30Tr42OOmfe4l9rhy/RYosHSYUHFnbWhiuVp0fvv/f2/LEG0epEm9Xfik6D2+hCdYpA2zoWoaclooTPIayQpSxSJ5GFnz0Zw0g6HMc6FuM+L5TplYl0xPauYMB2AVS4Rs57UWwBiVo5RnIdxnaEvNRQ9T6OEHPlVQgwyWSjMyR7bj+fw6uGwgwEDGZ8eIkauzTJp4bGo0yLoPMmvkN/ZIe+MyNIeDfB7Rcd6/pFfG11XSRDy/HBKYv4I4cqhHkIc3Hj7M9+mmoNDGSqOGrS7V7GJhflsug0kCTzSHSX1Wp1KILpQQnjDADAbzTfJMo928MZJNBDQrr5pIR/5fPQKeJ9+innCpSY+5M4KBenFYb5AomY4SZEZkBvHm4JWBx/eEnXtHiNFTcZ7KvWYcZ+py4wU7L83jwhmqjqivp2RxxuJSf+1Df9gOPJ/UZcUrM9zfP59Q7IVcJg3AOTD/DeMVVHD53Uu+3oHBsvBicijkZU7AWz6dz9f8INtF1dq08=
   app: evaluationipssi
   on:
     branch: dev
