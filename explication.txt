@@ -1,0 +1,4 @@
+Ajouter un fichier explication.txt à la racine et m'expliquer comment faire pour bloquer 
+une pull request vers master si la CI echoue
+
+Il faut ajouter une règle de protection dans la branche master et mettre que le statut doit être success. 
